@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_034502) do
   end
 
   create_table "campsites", force: :cascade do |t|
+    t.text "name"
     t.text "location"
     t.float "latitude"
     t.float "longitude"
