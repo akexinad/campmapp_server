@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :campsites
+  resources :users
+  resources :amenities
+  resources :comments
+  resources :photos
+  resources :favourites
 end

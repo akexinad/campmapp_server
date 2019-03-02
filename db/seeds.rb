@@ -27,6 +27,7 @@ cs9 = Campsite.create :name => 'Dex Creek Bush', :location => 'Blue Mountains Na
 cs10 = Campsite.create :name => 'Alum Creek', :location => 'Ganbenang', :latitude => -33.757850, :longitude => 150.139358
 cs11 = Campsite.create :name => 'Blue Gums', :location => 'Yengo National Park', :latitude => -32.955092, :longitude => 150.887820
 cs12 = Campsite.create :name => 'Finchley', :location => 'Yengo National Park', :latitude => -32.980219, :longitude => 151.013231
+cs13 = Campsite.create :name => 'Dunns Swamp', :location => 'Wollemi National Park', :latitude => -32.834893, :longitude => 150.205856
 cs14 = Campsite.create :name => 'Mountain Arm', :location => 'Yengo National Park', :latitude => -32.984203, :longitude => 150.890632
 cs15 = Campsite.create :name => 'Mogo', :location => 'Yengo National Park', :latitude => -33.145141, :longitude => 151.091339
 cs16 = Campsite.create :name => 'Coorongooba', :location => 'Wollemi National Park', :latitude => -33.124510, :longitude => 150.323933
