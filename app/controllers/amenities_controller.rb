@@ -9,6 +9,10 @@ class AmenitiesController < ApplicationController
     end
   end
 
+  def show
+    # json for amenities/:id
+  end
+
   def new
     @amenity = Amenity.new
   end

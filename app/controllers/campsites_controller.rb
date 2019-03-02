@@ -9,6 +9,15 @@ class CampsitesController < ApplicationController
     end
   end
 
+  def show
+    @campsite = Campsite.find params[:id]
+
+    respond_to do |format|
+      format.html { render :html => @campsite }
+      format.json { render :json => @campsite }
+    end
+  end
+
   def new
     @campsite = Campsite.new
   end
