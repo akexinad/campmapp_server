@@ -14,9 +14,8 @@ class CampsitesController < ApplicationController
     @amenities = @campsite.amenities.all
 
     respond_to do |format|
-      format.html { render :html => @campsite, :html => @amenities }
-      format.json { render :json => @campsite }
-      format.json { render :json => @amenities }
+      format.html { render :html => @campsite }
+      format.json { render :json => @campsite.to_json(:include => [ :amenities ]) }
     end
   end
 

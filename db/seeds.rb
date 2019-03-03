@@ -22,7 +22,7 @@ cs4 = Campsite.create :name => 'Kiaramba Spring', :location => 'Kanagra-Boyd Nat
 cs5 = Campsite.create :name => 'The Beach', :location => 'Abercrombie River National Park', :latitude => -34.129090, :longitude => 149.634568
 cs6 = Campsite.create :name => 'Silent Creek', :location => 'Abercrombie River National Park', :latitude => -34.156827, :longitude => 149.678495
 cs7 = Campsite.create :name => 'Black Range', :location => 'Jenolan', :latitude => -33.755023, :longitude => 150.048412
-cs8 = Campsite.create :name => 'Dingo Bell', :location => 'Jaunter', :latitude => -33.971672, :longitude => 149.966454
+cs8 = Campsite.create :name => 'Dingo Dell', :location => 'Jaunter', :latitude => -33.971672, :longitude => 149.966454
 cs9 = Campsite.create :name => 'Dex Creek Bush', :location => 'Blue Mountains National Park', :latitude => -33.930573, :longitude => 150.191085
 cs10 = Campsite.create :name => 'Alum Creek', :location => 'Ganbenang', :latitude => -33.757850, :longitude => 150.139358
 cs11 = Campsite.create :name => 'Blue Gums', :location => 'Yengo National Park', :latitude => -32.955092, :longitude => 150.887820
