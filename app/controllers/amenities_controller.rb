@@ -10,7 +10,12 @@ class AmenitiesController < ApplicationController
   end
 
   def show
-    # json for amenities/:id
+    @amenity = Amenity.find params[:id]
+
+    respond_to do |format|
+      format.html { render :html => @amenity }
+      format.json { render :json => @amenity }
+    end
   end
 
   def new
