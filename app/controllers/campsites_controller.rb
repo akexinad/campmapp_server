@@ -11,11 +11,12 @@ class CampsitesController < ApplicationController
 
   def show
     @campsite = Campsite.find params[:id]
-    @amenities = @campsite.amenities.all
+    # @amenities = @campsite.amenities.all
+    # @photos = @campsite.photos.all
 
     respond_to do |format|
       format.html { render :html => @campsite }
-      format.json { render :json => @campsite.to_json(:include => [ :amenities ]) }
+      format.json { render :json => @campsite.to_json(:include => [ :amenities, :photos ]) }
     end
   end
 
