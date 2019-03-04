@@ -6,7 +6,6 @@ class CreateCampsites < ActiveRecord::Migration[5.2]
       t.float :latitude
       t.float :longitude
       t.float :cost
-      t.integer :amenity_id
 
       t.timestamps
     end

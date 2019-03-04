@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2019_03_01_034502) do
 
   create_table "amenities", force: :cascade do |t|
     t.text "name"
-    t.integer "campsite_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_03_01_034502) do
     t.float "latitude"
     t.float "longitude"
     t.float "cost"
-    t.integer "amenity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

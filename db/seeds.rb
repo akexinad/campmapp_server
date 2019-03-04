@@ -11,7 +11,7 @@ u1 = User.create :name => 'cecilia', :email => 'cecilia@qa.ws', :password => 'ch
 u2 = User.create :name => 'walter', :email => 'walter@qa.ws', :password => 'chicken', :admin => false
 
 ################################################
-# REMEMBER THE FACT THAT YOU HAVE POINTS FOR DECIMAL POINTS INSTEAD OF COULD FUCK YOU UP.
+# REMEMBER THE FACT THAT YOU HAVE DOTS FOR DECIMAL POINTS INSTEAD OF COMMAS COULD FUCK YOU UP.
 ################################################
 
 Campsite.destroy_all
@@ -44,14 +44,14 @@ a4 = Amenity.create :name => "Laundry"
 a5 = Amenity.create :name => "Drinking Water"
 a6 = Amenity.create :name => "Electricity"
 
-# ASSOCIATIONS ################################################
+# ASSOCIATIONS ###################################################################
 
-cs1.amenities << a1 << a2 << a3 << a4 << a5
-cs2.amenities << a1 << a2 << a3 << a4
-cs3.amenities << a1 << a2 << a3
-cs4.amenities << a1 << a2
-cs5.amenities << a1
-cs7.amenities << a1 << a2 << a3 << a4 << a5
+cs1.amenities << a1 << a2 << a3 << a4 << a5 << a6
+cs2.amenities << a1 << a2 << a3 << a4 << a5
+cs3.amenities << a1 << a2 << a3 << a4
+cs4.amenities << a1 << a2 << a3
+cs5.amenities << a1 << a2
+cs7.amenities << a1 << a2 << a3 << a4 << a5 << a6
 cs8.amenities << a1 << a2 << a3 << a4
 cs9.amenities << a1 << a2 << a3
 cs10.amenities << a1 << a2

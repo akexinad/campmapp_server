@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, :presence => true, :uniqueness => true
 
   has_many :photos
-  has_many :posts
+  has_many :comments
   has_many :campsites
   has_many :favourites
 end
