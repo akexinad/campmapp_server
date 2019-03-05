@@ -9,6 +9,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def find
+    @user = User.find_by_email params[:email]
+    render json:@user
+  end
+
+  def show
+    @user = User.find params[:id]
+    render json:@user
+  end
+
   def new
     @user = User.new
   end
@@ -53,6 +63,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:username, :email, :password, :password_confirmation)
     end
 end

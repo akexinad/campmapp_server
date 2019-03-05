@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :campsites
-  resources :users
+  post 'user_token' => 'user_token#create'
   resources :amenities
   resources :comments
   resources :photos
   resources :favourites
+  resources :campsites
+  get '/user' => 'users#find'
 end

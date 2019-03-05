@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_034502) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.text "title"
+    t.text "url"
     t.integer "user_id"
     t.integer "campsite_id"
     t.datetime "created_at", null: false
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_034502) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.text "name"
+    t.text "username"
     t.text "email"
     t.text "password_digest"
     t.boolean "admin", default: false

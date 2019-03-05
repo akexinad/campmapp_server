@@ -1,4 +1,5 @@
 class CampsitesController < ApplicationController
+  before_action :authenticate_user
   before_action :set_campsite, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -11,8 +12,6 @@ class CampsitesController < ApplicationController
 
   def show
     @campsite = Campsite.find params[:id]
-    # @amenities = @campsite.amenities.all
-    # @photos = @campsite.photos.all
 
     respond_to do |format|
       format.html { render :html => @campsite }

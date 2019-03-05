@@ -1,4 +1,6 @@
 class FavouritesController < ApplicationController
+  before_action :authenticate_user
+
   def _form
   end
 
