@@ -5,7 +5,7 @@ class CampsitesController < ApplicationController
   def index
     @campsites = Campsite.all
     respond_to do |format|
-      format.html { render :html => @campsites }
+      # format.html { render :html => @campsites }
       format.json { render :json => @campsites }
     end
   end
@@ -14,7 +14,7 @@ class CampsitesController < ApplicationController
     @campsite = Campsite.find params[:id]
 
     respond_to do |format|
-      format.html { render :html => @campsite }
+      # format.html { render :html => @campsite }
       format.json { render :json => @campsite.to_json(:include => [ :amenities, :photos ]) }
     end
   end
@@ -28,10 +28,10 @@ class CampsitesController < ApplicationController
 
     respond_to do |format|
       if @campsite.save
-        format.html { redirect_to @campsite, notice: 'Campsite was successfully created.' }
+        # format.html { redirect_to @campsite, notice: 'Campsite was successfully created.' }
         format.json { render :show, status: :ok, location: @campsite }
       else
-        format.html { render :new }
+        # format.html { render :new }
         format.json { render json: @campsite.errors, status: :unprocessable_entity }
       end
     end
@@ -40,10 +40,10 @@ class CampsitesController < ApplicationController
   def update
     respond_to do |format|
       if @campsite.update campsite_params
-        format.html { redirect_to @campsite, notice: 'Campsite was successfully updated.' }
+        # format.html { redirect_to @campsite, notice: 'Campsite was successfully updated.' }
         format.json { render :show, status: :ok, location: @campsite }
       else
-        format.html { render :edit }
+        # format.html { render :edit }
         format.json { render json: @campsite.errors, status: :unprocessable_entity }
       end
     end
@@ -52,7 +52,7 @@ class CampsitesController < ApplicationController
   def destroy
     @campsite.destroy
     respond_to do |format|
-      format.html { redirect_to campsites_url, notice: 'Campsite was successfully destroyed.' }
+      # format.html { redirect_to campsites_url, notice: 'Campsite was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -63,6 +63,6 @@ class CampsitesController < ApplicationController
     end
 
     def campsite_params
-      params.require(:campsite).permit(:name, :location, :latitude, :longitude, :cost, :amenity_id)
+      params.require(:campsite).permit(:name, :location, :latitude, :longitude, :cost)
     end
 end
