@@ -37,12 +37,13 @@ cs19 = Campsite.create :name => 'Woolshed Flat', :location => 'Turon National Pa
 cs20 = Campsite.create :name => 'The Pondage', :location => 'Gardens of Stone National Park', :latitude => -33.221457, :longitude => 150.115632
 
 Amenity.destroy_all
-a1 = Amenity.create :name => "Toilet"
-a2 = Amenity.create :name => "Shower"
-a3 = Amenity.create :name => "Kitchen"
-a4 = Amenity.create :name => "Laundry"
-a5 = Amenity.create :name => "Drinking Water"
-a6 = Amenity.create :name => "Electricity"
+a1 = Amenity.create :name => "bbq"
+a2 = Amenity.create :name => "toilet"
+a3 = Amenity.create :name => "shower"
+a4 = Amenity.create :name => "kitchen"
+a5 = Amenity.create :name => "laundry"
+a6 = Amenity.create :name => "water"
+a7 = Amenity.create :name => "electricity"
 
 Photo.destroy_all
 ph1 = Photo.create :url => "https://res.cloudinary.com/dn06wkfzm/image/upload/v1551674547/project3/alumcreek002.jpg"
@@ -108,23 +109,23 @@ ph60 = Photo.create :url => "https://res.cloudinary.com/dn06wkfzm/image/upload/v
 
 # ASSOCIATIONS ###################################################################
 
-cs1.amenities << a1 << a2 << a3 << a4 << a5 << a6
-cs2.amenities << a1 << a2 << a3 << a4 << a5
-cs3.amenities << a1 << a2 << a3 << a4
+cs1.amenities << a1 << a2 << a3 << a4 << a5 << a6 << a7
+cs2.amenities << a1 << a2 << a3 << a4 << a5  << a7
+cs3.amenities << a1 << a2 << a3 << a4 << a7
 cs4.amenities << a1 << a2 << a3
 cs5.amenities << a1 << a2
-cs7.amenities << a1 << a2 << a3 << a4 << a5 << a6
+cs7.amenities << a1 << a2 << a3 << a4 << a5 << a6  << a7
 cs8.amenities << a1 << a2 << a3 << a4
 cs9.amenities << a1 << a2 << a3
-cs10.amenities << a1 << a2
+cs10.amenities << a1 << a2  << a7
 cs11.amenities << a1
 cs13.amenities << a1 << a2 << a3 << a4 << a5
-cs14.amenities << a1 << a2 << a3 << a4
+cs14.amenities << a1 << a2 << a3 << a4 << a7
 cs15.amenities << a1 << a2 << a3
 cs16.amenities << a1 << a2
-cs17.amenities << a1
+cs17.amenities << a1  << a7
 cs19.amenities << a1 << a2 << a3 << a4 << a5
-cs20.amenities << a1 << a2 << a3 << a4
+cs20.amenities << a1 << a2 << a3 << a4 << a7
 
 cs10.photos << ph1 << ph2 << ph3
 cs7.photos << ph4 << ph5 << ph6
