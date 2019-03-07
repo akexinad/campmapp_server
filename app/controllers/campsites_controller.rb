@@ -1,6 +1,5 @@
 class CampsitesController < ApplicationController
   before_action :authenticate_user
-  before_action :set_campsite, only: [:show, :edit, :update, :destroy]
 
   def index
     @campsites = Campsite.all
@@ -25,7 +24,6 @@ class CampsitesController < ApplicationController
 
   def create
     @campsite = Campsite.new campsite_params
-
     respond_to do |format|
       if @campsite.save
         # format.html { redirect_to @campsite, notice: 'Campsite was successfully created.' }
